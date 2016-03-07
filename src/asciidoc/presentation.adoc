@@ -28,6 +28,7 @@ image:{images}/lego-everything-is-awesome.png[]
 * Java developer for many years (since 1996)
 * Messages from mrhaki at http://mrhaki.blogspot.com
 ** Groovy, Grails, Gradle, Spock, Ratpack, Asciidoctor
+** Book at https://leanpub.com/awesomeasciidoctornotebook
 * Twitter http://www.twitter.com/mrhaki[@mrhaki]
 * Code at https://github.com/mrhaki/javaland2016-asciidoctor
 

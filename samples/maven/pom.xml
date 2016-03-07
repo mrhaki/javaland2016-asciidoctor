@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>jfall2014</groupId>
+    <groupId>javaland2016</groupId>
     <artifactId>asciidoc-to-html-example</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>AsciiDoc to HTML Maven Example</name>
@@ -14,7 +14,7 @@
             <plugin>
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>
-                <version>1.5.0</version>
+                <version>1.5.2</version>
                 <!-- Uncomment the following element to override the version of AsciidoctorJ -->
                 <!--
                 <dependencies>
@@ -58,7 +58,7 @@
                                   <imagesdir>./images</imagesdir>
                               </attributes>
                             Embed stylesheets and images::
-                            
+
                               - set embedAssets option to true
                               - don't set linkcss attribute
                               - set imagesdir attribute to path relative to project root
@@ -67,7 +67,7 @@
                                   <imagesdir>src/docs/asciidoc/images</imagesdir>
                               </attributes>
                             Link to stylesheets but embed images::
-                            
+
                               - set embedAssets option to true
                               - set linkcss attribute to true
                               - set imagesdir attribute to path relative to project root
@@ -77,7 +77,7 @@
                                   <imagesdir>src/docs/asciidoc/images</imagesdir>
                               </attributes>
                             Embed stylesheets but link images (default)::
-                            
+
                               - don't set embedAssets option
                               - don't set linkcss attribute
                               - set imagesdir attribute to path relative to AsciiDoc source file
