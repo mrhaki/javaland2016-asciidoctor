@@ -1,21 +1,9 @@
-buildscript {
-    repositories {
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.0'
-    }
+plugins {
+    id 'org.asciidoctor.convert' version '1.5.3'
 }
 
-apply plugin: 'org.asciidoctor.gradle.asciidoctor'
-
 asciidoctor {
-    options = [
-        attributes: [
-            toc: 'left',
-            'source-highlighter': 'coderay',
-            icons: 'font'
-        ]
-    ]
+    attributes 'icons': 'font',
+               'toc': 'left',
+               'source-highlighter': 'highlightjs'
 }

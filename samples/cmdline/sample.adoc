@@ -1,7 +1,7 @@
 = Sample Asciidoctor
 
 Writing documentation with Asciidoctor is awesome
-sample for JFall 2014.
+sample for Javaland 2016.
 
 == Tasks
 

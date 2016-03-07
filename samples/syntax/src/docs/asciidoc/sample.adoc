@@ -1,3 +1,5 @@
+:icons: font
+
 = Sample Asciidoctor
 
 Writing documentation with Asciidoctor is awesome
@@ -35,7 +37,6 @@ System.out.println("Some code");
 
 
 
-////
 === Level 3
 
 Some more text.
@@ -43,7 +44,6 @@ Some more text.
 ==== Level 4
 
 We are in way deep.
-////
 
 
 
@@ -62,7 +62,6 @@ We are in way deep.
 
 
 
-////
 .Title for a list
 * Level 1
 ** Level 2
@@ -71,7 +70,6 @@ We are in way deep.
 . Level 1
 . Level 2
 .. Level 2.1
-////
 
 
 
@@ -95,12 +93,10 @@ We are in way deep.
 
 
 
-////
 Some sample formatting with *bold* and _italic_ text.
 We can also combine them to a *_bolditalic_* text.
 
 Or we want text to be `code`, which is also possible.
-////
 
 
 
@@ -124,11 +120,9 @@ Or we want text to be `code`, which is also possible.
 
 
 
-////
 .Happy
 image::image.jpg[]
 
-////
 
 
 
@@ -156,7 +150,6 @@ image::image.jpg[]
 
 
 
-////
 http://asciidoctor.org
 
 http://asciidoctor.org[Asciidoctor website]
@@ -168,7 +161,6 @@ http://asciidoctor.org[Asciidoctor website, window=_blank]
 
 http://asciidoctor.org
 
-////
 
 
 
@@ -195,7 +187,6 @@ http://asciidoctor.org
 
 
 
-////
 .Sample table
 |===
 | Column 1 | Column 2
@@ -210,9 +201,9 @@ http://asciidoctor.org
 
 
 
-[cols="1,1,2", options="header"] 
+[cols="1,1,2", options="header"]
 |===
-| Column 1 
+| Column 1
 | Column 2
 | Takes more space
 
@@ -234,7 +225,6 @@ Column 1, Column 2
 Row 1.1, Row 1.2
 Row 2.1, Row 2.2
 |===
-////
 
 
 
@@ -271,8 +261,6 @@ Row 2.1, Row 2.2
 
 
 
-
-////
 
 TIP: Simple tip paragraph
 
@@ -294,7 +282,6 @@ We can use a block and apply a type for the block.
 In this case a tip.
 ====
 
-////
 
 
 
@@ -321,9 +308,8 @@ In this case a tip.
 
 
 
-////
 
-:message: Hello JFall 2014
+:message: Hello Javaland 2016
 
 
 We have defined an attribute with the name
@@ -333,7 +319,6 @@ Asciidoctor comes with built-in attributes.
 This document is generated with Asciidoctor {asciidoctor-version}
 for example. On {docdatetime}.
 
-////
 
 
 
@@ -357,7 +342,6 @@ for example. On {docdatetime}.
 
 
 
-////
 
 
 ....
@@ -365,7 +349,7 @@ This is a literal block
 ....
 
 ++++
-<p>Include HTML <b>unprocessed</b> in the output. 
+<p>Include HTML <b>unprocessed</b> in the output.
 The backend must be HTML for this to work.
 </p>
 ++++
@@ -374,7 +358,7 @@ The backend must be HTML for this to work.
 
 .Java source
 ----
-package jfall2014;
+package javaland2016;
 
 public class Sample {
     public static void main(String[] args) {
@@ -388,7 +372,7 @@ public class Sample {
 .Java source
 [source,java]
 ----
-package jfall2014;
+package javaland2016;
 
 public class Sample {
     public static void main(String[] args) {
@@ -413,7 +397,7 @@ public class Sample {
 .Java source
 [source,java]
 ----
-package jfall2014;  // <1>
+package javaland2016;  // <1>
 
 public class Sample {
     public static void main(String[] args) {
@@ -425,7 +409,77 @@ public class Sample {
 <2> Create an instance of `Sample` class.
 
 
-////
+
+
+
+:javaSrc: ../../../
+
+[source,java]
+----
+include::{javaSrc}/src/main/java/javaland2016/Sample.java[lines=4..6]
+----
+
+
+
+
+
+
+
+[source,java]
+----
+include::{javaSrc}/src/main/java/javaland2016/SampleBean.java[tag=main,indent=0]
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+''''
+
+== Sample diagram
+
+=== Diagram
+
+[ditaa,asciidoctor-diagram-process]
+....
+                   +-------------+
+                   | Asciidoctor |-------+
+                   |   diagram   |       |
+                   +-------------+       | PNG out
+                       ^                 |
+                       | ditaa in        |
+                       |                 v
+ +--------+   +--------+----+    /---------------\
+ |        |---+ Asciidoctor +--->|               |
+ |  Text  |   +-------------+    |   Beautiful   |
+ |Document|   |   !magic!   |    |    Output     |
+ |     {d}|   |             |    |               |
+ +---+----+   +-------------+    \---------------/
+     :                                   ^
+     |          Lots of work             |
+     +-----------------------------------+
+....
 
 
 
@@ -453,22 +507,10 @@ public class Sample {
 
 
 
+''''
+== Inline Macro
 
+Sample document to show extension for Asciidoctor written in Java/Groovy.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+With the twitter macro we can create links
+to the user's Twitter page like twitter:mrhaki[].

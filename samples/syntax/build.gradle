@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.8'
+        classpath 'org.asciidoctor:asciidoctorj-epub3:1.5.0-alpha.4'
+    }
+}
+
+plugins {
+    id 'org.asciidoctor.convert' version '1.5.3'
+    id "com.github.jruby-gradle.base" version "1.2.1"
+}
+
+dependencies {
+    gems 'rubygems:asciidoctor-diagram:1.2.0'
+}
+
+asciidoctor {
+    dependsOn jrubyPrepare
+    gemPath = jrubyPrepare.outputDir
+    requires 'asciidoctor-diagram'
+
+    resources {
+        from(sourceDir) {
+            include 'images/**'
+            include '*.png'
+            include '*.jpg'
+        }
+    }
+    attributes 'source-highlighter' : 'highlightjs'
+    backends 'pdf'
+}
+
+defaultTasks 'asciidoctor'
