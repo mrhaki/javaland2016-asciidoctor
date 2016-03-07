@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        mavenLocal()
         jcenter()
     }
     dependencies {
@@ -30,7 +31,9 @@ asciidoctor {
         }
     }
     attributes 'source-highlighter' : 'highlightjs'
-    backends 'pdf'
+
+    // Uncomment for PDF generation
+    //backends 'pdf'
 }
 
 defaultTasks 'asciidoctor'

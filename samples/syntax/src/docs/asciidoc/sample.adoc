@@ -3,7 +3,7 @@
 = Sample Asciidoctor
 
 Writing documentation with Asciidoctor is awesome
-sample for JFall 2014.
+sample for Javaland 2016.
 
 == Tasks
 
@@ -509,6 +509,7 @@ include::{javaSrc}/src/main/java/javaland2016/SampleBean.java[tag=main,indent=0]
 
 ''''
 == Inline Macro
+
 
 Sample document to show extension for Asciidoctor written in Java/Groovy.
 
